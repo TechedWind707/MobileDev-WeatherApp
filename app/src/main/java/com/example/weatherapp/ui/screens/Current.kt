@@ -60,10 +60,10 @@ fun Current() {
 
         Text("Temperature:")
 
-        Text(day.temperature.toString())
+        Text(day.temperature.toString() + "°C")
         Text("Feels like:")
-        Text(day.feelsLike.toString())
+        Text(day.feelsLike.toString() + "°C")
         Text("Wind: ")
-        Text("${day.maxWindSpeed} km/h ${day.currentWindDirection}")
+        Text("${day.maxWindSpeed} kph ${day.currentWindDirection}")
     }
 }

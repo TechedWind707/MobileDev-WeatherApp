@@ -26,7 +26,7 @@ import java.time.LocalDate
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun Forecast(innerPadding: PaddingValues) {
+fun Forecast() {
 
     val listDay = listOf(
         Day(
@@ -129,8 +129,7 @@ fun Forecast(innerPadding: PaddingValues) {
         )
     )
 
-    LazyColumn(
-    ) {
+    LazyColumn{
         items(listDay) { day ->
             Column(
                 modifier = Modifier
@@ -153,8 +152,8 @@ fun Forecast(innerPadding: PaddingValues) {
                 }
 
                 Column(
-                    verticalArrangement = Arrangement.spacedBy(5.dp)
-
+                    verticalArrangement = Arrangement.spacedBy(5.dp),
+                    horizontalAlignment = Alignment.CenterHorizontally
                 ) {
                     Text(day.description)
                     Text("Feels like: " + day.feelsLike.toString() + "°C")

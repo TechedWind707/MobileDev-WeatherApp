@@ -102,7 +102,7 @@ fun Navigation() {
             modifier = Modifier.padding(innerPadding)
         ) {
             composable("current") { Current() }
-            composable("forecast") { Forecast(innerPadding) }
+            composable("forecast") { Forecast() }
         }
     }
 }
