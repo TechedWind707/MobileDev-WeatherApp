@@ -1,8 +1,10 @@
 package com.example.weatherapp.models
 
+import java.time.LocalDate
+
 data class Day(
-    val date: String,
-    val currentTemperature: Int,
+    val date: LocalDate,
+    val temperature: Int,
     val description: String,
     val feelsLike: Int,
     val maxWindSpeed: Int,
@@ -12,5 +14,5 @@ data class Day(
     val highTemp: Int,
     val lowTemp: Int,
     val chanceOfRain: Int,
-    val amountOfRain: Int,
+    val amountOfRain: Int? = null,
 )
